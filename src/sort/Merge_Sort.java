@@ -12,6 +12,15 @@ public class Merge_Sort {
         System.out.println(Arrays.toString(arr));
     }
 
+    static void mergeSort(int[] data, int p, int r) {
+        if (p < r) {
+            int q = (p + r) / 2;
+            mergeSort(data, p, q);
+            mergeSort(data, q + 1, r);
+            merge(data, p, q, r);
+        }
+    }
+
     static void merge(int[] data, int p, int q, int r) {
         int i = p, j = q + 1, k = p;
         int tmp[] = new int[data.length];
