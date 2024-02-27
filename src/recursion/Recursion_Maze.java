@@ -52,6 +52,6 @@ public class Recursion_Maze {
     }
 
     public static void main(String[] args) {
-        findMazePath(0,0);
+        System.out.println(findMazePath(0,0));
     }
 }
